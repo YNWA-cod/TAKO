@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAKO - Оформити замовлення</title>
+    <link rel="stylesheet" href="css/pre-order-style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <nav class="nav">
+          <div class="header-left">
+            <img src="images/Logo.png" />
+            <button class="dropdown-btn">Вироби</button>
+          </div>
+          <div class="about-nav"><a href="#about">Про нас</a></div>
+          <div class="wework"><a href="#workflow">Як ми працюємо</a></div>
+          <div class="partners"><a href="#partners">Партнери</a></div>
+          <div class="feedback"><a href="#reviews">Відгуки</a></div>
+        </nav>
+
+        <div class="header-right">
+          <div class="contact">
+            <a href="#" class="btn outline">Зв'язатися</a>
+          </div>
+          <div class="support">
+            <a href="#" class="btn outline">Підтримати</a>
+          </div>
+          <div class="pre-order">
+            <a href="#" class="btn filled">
+              🔒 Передзамовлення <span class="badge">9+</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main class="main-content">
+        <h1 class="page-title">Оформити замовлення</h1>
+
+        <section class="section">
+          <h2 class="section-title">Контакти замовника</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Прізвище</label>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Введіть"
+                pattern="[^\d]*"
+                oninput="this.value=this.value.replace(/[0-9]/g,'');"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Ім'я</label>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Введіть"
+                pattern="[^\d]*"
+                oninput="this.value=this.value.replace(/[0-9]/g,'');"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">По батькові</label>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Введіть"
+                pattern="[^\d]*"
+                oninput="this.value=this.value.replace(/[0-9]/g,'');"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Номер телефону</label>
+              <input
+                type="text"
+                class="form-input"
+                minlength="13"
+                maxlength="13"
+                pattern="[+][0-9]{13}"
+                placeholder="+380123456789"
+                value="+380"
+                required
+                oninput="this.value = this.value.replace(/[^0-9+]/g, ''); if(!this.value.startsWith('+380')) this.value = '+380';"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Доставка</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Місто / Населений пункт</label>
+              <input type="text" class="form-input" placeholder="Введіть" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Номер відділення</label>
+              <div class="select-wrapper">
+                <select class="form-select">
+                  <option>Оберіть номер відділення НП</option>
+                  <option>Відділення №1</option>
+                  <option>Відділення №2</option>
+                  <option>Відділення №3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Зручний метод зв'язку</h2>
+          <div class="contact-methods">
+            <div class="form-group">
+              <label class="form-label">Номер телефону</label>
+              <input
+                type="text"
+                class="form-input"
+                minlength="13"
+                maxlength="13"
+                pattern="[+][0-9]{13}"
+                placeholder="+380123456789"
+                value="+380"
+                required
+                oninput="this.value = this.value.replace(/[^0-9+]/g, ''); if(!this.value.startsWith('+380')) this.value = '+380';"
+              />
+            </div>
+            <div class="contact-method">
+              <input type="radio" id="viber" name="contact" />
+              <label for="viber">Viber</label>
+            </div>
+            <div class="contact-method">
+              <input type="radio" id="telegram" name="contact" />
+              <label for="telegram">Telegram</label>
+            </div>
+            <div class="contact-method">
+              <input type="radio" id="whatsapp" name="contact" />
+              <label for="whatsapp">WhatsApp</label>
+            </div>
+            <div class="contact-method">
+              <input type="radio" id="signal" name="contact" />
+              <label for="signal">Signal</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Номер телефону</label>
+            <input
+              type="text"
+              class="form-input"
+              minlength="13"
+              maxlength="13"
+              pattern="[+][0-9]{13}"
+              placeholder="+380123456789"
+              value="+380"
+              required
+              oninput="this.value = this.value.replace(/[^0-9+]/g, ''); if(!this.value.startsWith('+380')) this.value = '+380';"
+            />
+          </div>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Передзамовлення</h2>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img
+              src="images/Frame 162.png"
+              alt="Пристрій швидкого спорядження набоїв"
+            />
+          </div>
+          <div class="product-details">
+            <div class="product-name">Пристрій швидкого спорядження набоїв</div>
+            <div class="product-controls">
+              <div class="quantity-control">
+                <button class="quantity-btn">-</button>
+                <input type="text" class="quantity-input" value="7" min="1" readonly />
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="product-price">10,00 грн</div>
+            </div>
+            <div class="product-note">собівартість за од.</div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img
+              src="images/Frame 162.png"
+              alt="Пристрій швидкого спорядження набоїв"
+            />
+          </div>
+          <div class="product-details">
+          <div class="product-name">Пристрій швидкого спорядження набоїв</div>
+            <div class="product-controls">
+              <div class="quantity-control">
+                <button class="quantity-btn">-</button>
+                <input type="number" class="quantity-input" value="7" min="1" readonly />
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="product-price">10,00 грн</div>
+            </div>
+            <div class="product-note">собівартість за од.</div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img
+              src="images/Frame 162.png"
+              alt="Пристрій швидкого спорядження набоїв"
+            />
+          </div>
+          <div class="product-details">
+            <div class="product-name">Пристрій швидкого спорядження набоїв</div>
+            <div class="product-controls">
+              <div class="quantity-control">
+                <button class="quantity-btn">-</button>
+                <input type="number" class="quantity-input" value="7" min="1" readonly/>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="product-price">10,00 грн</div>
+            </div>
+            <div class="product-note">собівартість за од.</div>
+          </div>
+        </div>
+
+        <div class="total-section">
+          <div class="total-row">
+            <span class="total-label">собівартість виробів:</span>
+          </div>
+          <div class="total-row">
+            <span class="total-value">210,00 грн</span>
+          </div>
+          <div class="military-discount">Для військових — безкоштовно</div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-primary">Підтвердити</button>
+          <button class="btn-secondary">Підтвердити та підтримати</button>
+        </div>
+
+        <div class="disclaimer">
+          Залишіть заявку — ми зв'яжемось із вами для уточнення деталей і
+          підтвердження замовлення.<br />
+          Жодної передоплати до підтвердження. Все просто і чесно.
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">© 2025 TAKO. All rights reserved</div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".quantity-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const input = this.parentElement.querySelector(".quantity-input");
+          const isIncrement = this.textContent === "+";
+          let value = parseInt(input.value);
+
+          if (isIncrement) {
+            value++;
+          } else if (value > 1) {
+            value--;
+          }
+
+          input.value = value;
+          updateTotal();
+        });
+      });
+
+      document.querySelectorAll('input[name="contact"]').forEach((radio) => {
+        radio.addEventListener("change", function () {
+          document.querySelectorAll(".contact-method").forEach((method) => {
+            method.classList.remove("active");
+          });
+          this.closest(".contact-method").classList.add("active");
+        });
+      });
+
+      function updateTotal() {
+        const quantities = document.querySelectorAll(".quantity-input");
+        const pricePerItem = 10.0;
+        let total = 0;
+
+        quantities.forEach((input) => {
+          total += parseInt(input.value) * pricePerItem;
+        });
+
+        document.querySelector(".total-value").textContent =
+          total.toFixed(2) + " грн";
+      }
+
+      document
+        .querySelector(".btn-primary")
+        .addEventListener("click", function () {
+          alert("Заявка надіслана! Ми зв'яжемось з вами найближчим часом.");
+        });
+
+      document
+        .querySelector(".btn-secondary")
+        .addEventListener("click", function () {
+          alert("Заявка надіслана з підтримкою! Дякуємо за підтримку проекту.");
+        });
+    </script>
+  </body>
+</html>
